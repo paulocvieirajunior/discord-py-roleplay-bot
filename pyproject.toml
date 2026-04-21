@@ -1,0 +1,21 @@
+[tool.ruff]
+# Define a versão mínima do Python
+target-version = "py313"
+line-length = 88
+
+[tool.ruff.lint]
+# "E" (Error), "F" (Pyflakes), "I" (Isort), "B" (Bugbear)
+select = ["E", "F", "I", "B", "C90", "UP"]
+ignore = ["E501"] # Ignorar erro de linha longa (o formatter resolve)
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.mypy]
+python_version = "3.13"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+ignore_missing_imports = true
